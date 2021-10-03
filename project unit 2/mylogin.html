@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Hokmakeup & Beauty products</title>
+    <link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
+    <style>
+         /* login */
+         #loginn {
+            margin:auto;
+            background-color: white;
+            position: absolute;
+            width:20%;
+            padding:15px 20px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        
+        }
+        #myform {
+            text-align: center;background-color: white;width:100%; padding:10px;border-radius: 3px;font-size: 16px;
+        }
+        #myform:hover {
+            background-color:rgb(80, 65, 65);
+            color:rgb(252, 29, 29);
+        }
+        #account{
+            background-color:rgb(80, 65, 65);
+            color:rgb(252, 29, 29);
+            width:100%;
+            padding:10px;
+            border-radius: 4px;
+        }
+
+        /* login */
+
+    </style>
+</head>
+<body>
+    <div id="loginn">
+        <p style="text-decoration: underline; font-weight: bold;display:inline-block">CUSTOMER LOGIN</p>
+        <button style="background-color: white;font-weight: bold;border-color: white;margin-left: 30%;" id="cut" onclick="back()">X</button> <br>
+        <hr>
+        <p style="margin-top: 20px;">If you are already registered, please log in.</p> <br>
+       
+        <lable style="font-weight: bold;font-size: 12px;" >Email<sup style="color:red">*</sup></lable> <br> <br>
+        <input type="email" placeholder="Email" style="width:100%;padding:10px;border-radius: 3px;" id="email"><br> <br>
+       
+        <lable style="font-weight: bold;font-size: 12px;">Password<sup style="color:red">*</sup></lable> <br> <br>
+        <input type="password" placeholder="Password" style="width:100%;padding:10px;border-radius: 3px;" id="password"><br> <br>
+       
+        <p>Forgot your password?</p> <br>
+        
+        <button id="myform" onclick="loggin(event)">LOGIN</button>
+        
+        <br> <br>
+
+        <div style="background-color: #F7F7F7;width:100%">
+
+            <p>Create your account and enjoy a new shopping experience.</p> <br>
+
+            <a href="account.html"><button id="account">CREATE A NEW ACCOUNT</button></a> <br>
+
+        </div>
+        
+
+</div>
+</body>
+</html>
+<script>
+     let flag = false;
+
+function loggin(event) {
+     event.preventDefault()
+
+
+
+     let email = document.getElementById("email")
+     let password = document.getElementById("password")
+
+     let all_users = JSON.parse(localStorage.getItem("hok_users"))
+
+
+     all_users.forEach(function(user){
+
+         if(email.value == user.email && password.value == user.password) {
+
+             email.value = ""
+                 password.value = ""
+             setTimeout(function(){
+                
+                 window.location.href = "index.html"
+             },2000)
+             
+         }else {
+         flag = true
+         return
+         }
+
+     })
+
+   
+   
+ }
+
+ if(flag == true) {
+         alert("Invalid Credentials")
+     }
+
+     function back() {
+         window.location.href = "index.html"
+     }
+</script>

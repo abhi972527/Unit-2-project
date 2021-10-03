@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>(1) Buy Makeup Items & Beauty Products Online in India - HOK...</title>
+<link rel="shortcut icon" type="image" href="C:\Users\Ankit Mishra\Downloads\logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+    /* header */
+    html {
+        scroll-behavior: smooth;
+        
+    }
+        * {
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+     
+        li,a {
+            list-style: none;
+            text-decoration: none;
+        }
+        .topbar {
+            background-color: #F4DDEE;
+            padding:10px 12%;
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+
+            /* position: fixed; */
+        }
+        .topbar a:hover {
+            text-decoration: underline;
+            transition: 0.9;
+        }
+        .log_sign li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px 5px;
+        }
+        .log_sign  a {
+            text-decoration: none;
+            margin:0x 10px;
+            color:black;
+        }
+        .nav {
+            display: inline-block;
+        }
+
+
+        .logo_search {
+            padding: 15px 10%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width:150px;
+            height:60px;
+        }
+  
+        .search input {
+            height: 45px;
+            width:250px;
+           
+            margin-right: 0px;
+            border:1px solid rgb(209, 199, 199);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .search_btn {
+            margin-left: 0px;
+            height:45px;
+            width:35px;
+            background-color: #FFFFFF;
+            border: 1px solid rgb(209, 199, 199);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .search_wish_cart li {
+            display:inline-block;
+            margin:5px 20px;
+        }
+        #Top_search {
+            background-color: rgb(250, 249, 243);
+            position: fixed;
+            width:300px;
+            box-shadow: rgba(red,250,100, 0.6);
+            border-radius: 5px;
+            padding : 20px;
+            line-height: 30px;
+            display: flex;
+            flex-direction: column;
+            display: none;
+         
+        }
+        #Top_search a {
+            background-color: rosybrown;
+            margin:5px;
+        
+        }
+        #cart {
+            text-align: center;
+            width:25%;
+            position: fixed;
+            line-height: 50px;
+            border-radius: 10px;
+            background-color: white;
+            border-radius: 10px;
+            display:none;
+        }
+        #cart button {
+            background-color: #FF66B9;
+            padding:5px 20px;
+            color:white;
+            width:90%;
+            border-radius: 8px;
+        }
+    
+
+
+    
+        .makeup {
+            display:flex;
+            padding:10px;
+            background-color: white;
+            position: absolute;
+            padding-left: 10%;
+            width:100%;
+            font-size: 12px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+            display:none;
+        }
+        .makeup div {
+            margin:10px;
+            color:black;
+            line-height: 30px;
+            
+        }
+        .makeup div a {
+            text-decoration: none;
+        }
+        .color-pink {
+            color:#FF66B9;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #kits_combos {
+            width:11.5%;
+            margin-left: 32.5%;
+            background-color: white;
+            line-height: 25px;
+            display:block;
+            font-size: 15px;
+            padding:10px;
+            position:absolute;
+            display:none;
+        }
+        #kits_combos p a {
+            text-decoration: none;
+        }
+        #middle{
+        max-width: 1200px;
+        margin: auto;
+    }
+    
+
+
+
+        .navlist {
+            background-color: #383E47;
+            color:white;
+            padding:10px;
+            font-size: 14px;
+            font-weight: bold;
+            padding-left: 10%;
+            width:100%;
+        }
+        .navlist a:hover {
+            text-decoration: underline;
+            
+        }
+        .navlist a {
+            margin:10px;
+            color:white;
+            
+        }
+        /* header */
+ #brands{
+     max-width: 1200px;
+     margin: auto;
+     box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2), 0 5px 10px 0 rgba(0, 0, 0, 0.19);;
+ }
+ .brand-sec{
+     margin: 1% 1% 3% 10.5%;
+     font-family: Montserrat,sans-serif;
+ }
+ .brands-home{
+     color: black;
+     display:inline-block;
+     margin: 0 1% 0 10.5%;
+     text-decoration: none;
+     font-size: medium;
+ }
+ .b-name{
+     color: black;
+      display:inline-block;
+      font-size: medium;
+ }
+ #brands > div > a > img {
+     margin: 0.5% 5%;
+     text-decoration: underline;
+ }
+
+
+
+
+
+ #d1 {
+            /* height: 200px; */
+            background-color: #ecf0f1;
+        }
+        #d2 {
+            /* height: 400px; */
+            background-color: #2d3436;
+            color: white;
+        }
+        /* .d2 {
+            height: 300px;
+
+        } */
+        .h2 {
+            text-align: center; 
+            margin: 20px; 
+            padding-top: 20px;
+
+        }
+        .d3 {
+            /* border: 1px solid black; */
+            /* height: 250px; */
+            width: 70%;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+        .d4 {
+            display: inline-block;
+            width: 20%;
+            /* height: 250px; */
+            /* border: 1px solid black; */
+            vertical-align:text-top;
+            line-height: 30px;
+        }
+        #subscribe {
+            width: 38%;
+        }
+        .inp1 {
+            height: 40px;
+            width: 60%;
+            border-radius: 3px;
+        }
+        .inp2 {
+            height: 40px;
+            width: 30%;
+            background-color: pink;
+            border-radius: 3px;
+
+        }
+     
+        .img100 {
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+        }
+        #last {
+            margin-left: 15%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+        }
+        #l {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+ background-blend-mode: multiply,multiply;
+        }
+        span a {
+            text-decoration: none;
+          color:white
+        }
+        span a:hover {
+            text-decoration: underline;
+            color:#FF66B9;
+        }
+
+        
+        /* login */
+        #loginn {
+            margin-left:70%;
+            background-color: white;
+            position: absolute;
+            width:20%;
+            padding:15px 20px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+            display: none;
+        }
+        #myform {
+            text-align: center;background-color: white;width:100%; padding:10px;border-radius: 3px;font-size: 16px;
+        }
+        #myform:hover {
+            background-color:rgb(80, 65, 65);
+            color:rgb(252, 29, 29);
+        }
+        #account{
+            background-color:rgb(80, 65, 65);
+            color:rgb(252, 29, 29);
+            width:100%;
+            padding:10px;
+            border-radius: 4px;
+        }
+
+        /* login */
+</style>
+</head>
+<body>
+<!-- header -->
+
+<div class="topbar">
+    <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
+    <div class="log_sign">
+        <ul class="nav">
+        <li><a href="track.html">Track Order</a></li>
+        <li style="font-size: 10px;"> <i style='font-size:15px' class='fas'>&#xf406;</i> </li>
+        <li id="clicklog">Login</li>
+        <li>or</li>
+        <li> <a href="account.html">Create an account</a></li>
+    </ul>
+    </div>
+</div>
+
+
+  <!-- login -->
+ 
+  <div id="loginn">
+    <p style="text-decoration: underline; font-weight: bold;display:inline-block">CUSTOMER LOGIN</p>
+    <button style="background-color: white;font-weight: bold;border-color: white;margin-left: 30%;" id="cut">X</button> <br>
+    <hr>
+    <p style="margin-top: 20px;">If you are already registered, please log in.</p> <br>
+   
+    <lable style="font-weight: bold;font-size: 12px;" >Email<sup style="color:red">*</sup></lable> <br> <br>
+    <input type="email" placeholder="Email" style="width:100%;padding:10px;border-radius: 3px;" id="email"><br> <br>
+   
+    <lable style="font-weight: bold;font-size: 12px;">Password<sup style="color:red">*</sup></lable> <br> <br>
+    <input type="password" placeholder="Password" style="width:100%;padding:10px;border-radius: 3px;" id="password"><br> <br>
+   
+    <p>Forgot your password?</p> <br>
+    
+    <button id="myform" onclick="loggin(event)">LOGIN</button>
+    
+    <br> <br>
+
+    <div style="background-color: #F7F7F7;width:100%">
+
+        <p>Create your account and enjoy a new shopping experience.</p> <br>
+
+        <a href="account.html"><button id="account">CREATE A NEW ACCOUNT</button></a> <br>
+
+    </div>
+    
+
+</div>
+<!-- login end -->
+
+
+
+<div class="logo_search">
+
+    <div class="logo">
+        <a href="index.html"><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/website_logo.png?v=1609240506" alt="There could be logo" ></a>
+    </div>
+
+    <div class="search">
+     <ul class="search_wish_cart">
+       
+        <li> <input type="text" placeholder="search for products & brands etc," id="search_input">
+            <a href="#"><button class="search_btn"><i class="fas fa-search" ></button></i></a>
+            <div id="Top_search" class="hide_search">
+                <p>TRENDING</p>
+                <a href="new_arrival.html">New arrival</a>
+                <a href="#">Makeup Kit</a>
+                <a href="#">Make Revolution</a>
+                <a href="#">Milani</a>
+                <a href="#">L.A. Girl</a>
+            </div>
+       
+       </li>
+      
+       <li ><a href="hokwish.html" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
+      
+       <li><a> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
+      
+<div id="cart">
+    <p>Your cart is currently empty</p>
+    <a href="products.html"><button>Continue Shopping</button></a>
+</div>
+       
+     </ul>
+    
+    </div>
+</div>
+
+
+<div class="navlist">
+
+    <a href="new_arrival.html">NEW ARRIVALS</a>
+    
+     <a href="#" id="make_up">MAKE UP</a>
+     <a href="#" id="for_skin">SKIN</a>
+     <a href="brands.html">BRANDS</a>
+     <a href="#" id="kits&combos">KITS&COMBOS</a>
+     <a href="offers.html">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
+     <a href="#">TUTORIALS</a>
+
+</div>
+<div class="makeup">
+    <div>
+        <p><a href="#" class="color-pink">Eyes</a></p>
+        <p><a href="#">EyeBrow Enhancer</a></p>
+        <p><a href="#">Eye liner</a></p>
+        <p><a href="#">Eye primer</a></p>
+        <p><a href="#">Eye shadow</a></p>
+        <p><a href="#">False eyelashes</a></p>
+        <p><a href="#">Kajal</a></p>
+        <p><a href="#">Mascara</a></p>
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Face</a></p>
+        <p><a href="#">Blush</a></p>
+        <p><a href="#">B.B / C.C cream</a></p>
+        <p><a href="#">Bronzer</a></p>
+        <p><a href="#">Compact</a></p>
+        <p><a href="#">Concealer</a></p>
+        <p><a href="#">Contour</a></p>
+        <p><a href="#">Foundation</a></p>
+        <p><a href="#">Highlighter</a></p>
+        <p><a href="#">Loose power</a></p>
+        <p><a href="#">Primer</a></p>
+        <p><a href="#">Makeup remover</a></p>
+        <p><a href="#">Setting Spray</a></p>
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Lips</a></p>
+        <p><a href="#">Lip Balm</a></p>
+        <p><a href="#">Lip Gloss</a></p>
+        <p><a href="#">Lip liner</a></p>
+        <p><a href="#">Lipstick</a></p>
+        <p><a href="#">Liquid Lipstick</a></p>
+
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Nails</a></p>
+        <p><a href="#">Nail Polish</a></p>
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Tools & Brushes</a></p>
+        <p><a href="#">Brush set</a></p>
+        <p><a href="#">Face brush</a></p>
+        <p><a href="#">Eye brush</a></p>
+        <p><a href="#">Lip brush</a></p>
+        <p><a href="#">Sponges and Applicators</a></p>
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Kits</a></p>
+        <p><a href="#">Eye Palettes</a></p>
+        <p><a href="#">Face palettes</a></p>
+    </div>
+ </div>
+
+ <div class="makeup">
+    <div>
+        <p><a href="#" class="color-pink">Face</a></p>
+        <p><a href="#">Cleanser</a></p>
+        <p><a href="#">cream</a></p>
+        <p><a href="#">Face mask</a></p>
+        <p><a href="#">Serum & Oil</a></p>
+        <p><a href="#">Face Wash</a></p>
+        <p><a href="#">Facial Mist</a></p>
+        <p><a href="#">Facial Wipes</a></p>
+        <p><a href="#">Gel</a></p>
+        <p><a href="#">Scrub</a></p>
+        <p><a href="#">Moisturizer</a></p>
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Eyes</a></p>
+        <p><a href="#">Eye Cream</a></p>
+        <p><a href="#">Eye Patch</a></p>
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Lip Care</a></p>
+        <p><a href="#">Lip Balm</a></p>
+        <p><a href="#">Petrolium Jelly</a></p>
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Bath & Body</a></p>
+        <p><a href="#">Shower Gel</a></p>
+        <p><a href="#">Foot Scrub</a></p>
+        <p><a href="#">Body Oil</a></p>
+    </div>
+    <div>
+        <p><a href="#"  class="color-pink">Hair</a></p>
+        <p><a href="#">Hair Masque</a></p>
+        <p><a href="#">Hair Gel</a></p>
+        <p><a href="#">Shampoo</a></p>
+    </div>
+</div>
+
+<div id="kits_combos">
+    <p><a href="#">Combos</a></p>
+    <p><a href="#">Basic KIts</a></p>
+    <p><a href="#">Customisable Kits - </br> Basic</a></p>
+    <p><a href="#">Customisable Kits - </br> Professional</a></p>
+</div>
+<!-- header -->
+    <a class="brands-home" href="index.html" style="margin-top: 30px;">Home</a>
+    <p class="b-name" style="margin-top: 30px;">> &nbsp; &nbsp; Brands</p>
+
+    <h2 class="brand-sec">BRANDS</h2>
+    <div id="brands">
+        
+        <div>
+
+      <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/160x60_PP_logo_for_Brands_-_6_September_2021.jpg?v=1630908614" alt=""></a>
+
+      <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/160_X_60_Brand_Logos-04.jpg?v=1610615898" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/160_X_60_Brand_Logos-01.jpg?v=1610615879"
+            alt=""></a>
+    
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/XX_Logo_for_Brands.jpg?v=1626848792" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/160_X_60_Brand_Logos-03.jpg?v=1610615898" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/Wet_n_wild_1.png?v=1611830130" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/160_X_60_Brand_Logos-02.jpg?v=1610615898" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/Makeup_Obsession_1.png?v=1611830104" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/Physician_Formula.png?v=1611836446" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/Trend_Beauty_1.png?v=1611836446" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/Rude.png?v=1611836446" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/160x60_Relove_logo_for_Brands_copy.jpg?v=1631517257" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/Revolution_Pro.png?v=1611836447" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/Nicka_K_e27c2798-61a2-425e-802c-717a8519ec18.png?v=1612950680" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/The_Color_Workshop.jpg?v=1612958627" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/Lipsmacker_578e5443-ceb1-44f0-aacd-bee3cb8d9822.jpg?v=1612958627" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/Superdrug_1.png?v=1611836447" alt=""></a>
+    
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/Skin_Republic_e85219b0-d971-4252-ac21-c2befa0a3712.jpg?v=1612958627" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/beauty_b82f7b34-90f3-469d-96c5-1a822ccc9a6f.png?v=1624703837" alt=""></a> 
+    
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/oila_logo_png.png?v=1624702222" alt=""></a>
+
+    <a href=""><img src="https://cdn.shopify.com/s/files/1/0522/8534/1895/files/Lord_Berry.png?v=1611836447" alt=""></a>
+
+
+       </div>
+    </div>
+
+
+
+<br><br>
+
+
+
+    <div id="d1">
+
+    </div>
+    <div id="d2">
+        <h2 class="h2">
+        Need help? Call our support team at +91 9810245261
+        </h2>
+        <hr style="width: 70%; margin: auto;">
+        <div class="d3">
+            <div class="d4">
+                <h3>INFORMATION</h3>
+                   <span><a href="#"> About Us </a> </span><br>
+                  <span><a href="#">  Contact Us </a> </span><br>
+                  <span><a href="#">  Return Policy</a> </span><br>
+                <span><a href="#">Terms & Conditions</a> </span><br>
+                <span><a href="#">  Careers At Hok</a> </span><br>
+                    <span><a href="#">  Frequently Ask Questions </a></span><br>
+                        <span><a href="#">  Privacy Policy</a> </span><br>
+                            <span><a href="#">  Shipping Policy</a> </span><br>
+                                <span><a href="#">Offers</a> </span><br>
+            </div>
+            <div class="d4">
+                <h3>OUR TOP CATEGORIES</h3>
+                <span><a href="#"> Eyes</a> </span><br>
+                <span><a href="#">  Face </a></span><br>
+                <span><a href="#"> Brushes </a></span><br>
+                <span><a href="#"> Kits </a> </span><br>
+                <span><a href="#"> Lips</a> </span><br>
+                <span><a href="#">  Nails </a></span><br>
+            </div>
+            <div class="d4" id="subscribe">
+                <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                Get the latest updates on new products and upcoming sales <br> <br> <br>
+                <input type="text", placeholder="E-mail" class="inp1" >
+                <a href=""> <button class="inp2">subscribe</button> </a><br> <br>
+                <div>
+                    <a href="https://www.facebook.com" target="_blank"><i style="font-size:24px; color:white; margin: 5px 10px" class="fa">&#xf230;</i></a>
+                   
+                   <a href="https://twitter.com/?lang=en-in" target="_blank"> <i style="font-size:24px; color:white; margin:5px 10px;" class="fa">&#xf099;</i> </a>
+
+                   <a href="https://www.instagram.com" target="_blank"><i style="font-size:24px; color:white; margin:5px 10px" class="fa">&#xf16d;</i></a>
+                   
+
+                </div>
+            </div>
+            <div class="d4">
+                <h3>CONTACT</h3>
+                Hok Beauty Pvt Ltd. <br>
+                A-26, Ground Floor,  <br>
+                Naraina Industrial Area <br>
+                Phase 2 New Delhi-110028br <br> <br>
+
+                +91 9810245261 <br>
+
+                Mon-Sat 10 AM to 7 PM <br><br>
+
+
+                Email:  <br>
+                support@hokmakeup.com <br>
+                
+            </div>
+        </div>
+        <div class="d3">
+            HOK MAKEUP is the easiest way to buy international makeup brands in India.  <br>
+            100% genuine products sourced directly from the brands.
+        </div>
+        
+    </div>
+    <div id="l">
+        <div id="last">
+            All rights reserved © 2018 Hok Beauty Pvt. Ltd.
+        </div>
+    </div>
+
+
+    
+
+</body>
+
+
+<script>
+     let Top_search = document.getElementById("Top_search")
+
+let search = document.getElementById("Top_search")
+
+let text = search.querySelectorAll("a")
+
+let search_input = document.getElementById("search_input")
+
+search_input.addEventListener("click",show)
+
+Top_search.addEventListener("mouseleave",hide)
+
+function show(e) { 
+search_input.textContent = text.textContent
+   search.style.display = "flex"
+}
+function hide() {
+    search.style.display = "none"
+}
+//end of search portion
+
+// for cart icon portion
+
+let cart_pop = document.getElementById("cart")
+let cart_icon = document.getElementById("cart_icon")
+cart_icon.addEventListener("click", pop)
+cart_pop.addEventListener("mouseleave", hiden)
+
+function pop () {
+    cart_pop.style.display = "block" 
+}
+function hiden() {
+    cart_pop.style.display = "none"
+}
+// end of cart icon
+
+//for makeup pop 
+
+let makup = document.getElementsByClassName("makeup")[0]
+
+let make_up = document.getElementById("make_up")
+
+make_up.addEventListener("mouseover" , disply)
+make_up.addEventListener("mouseleave" , hidemakeup)
+function disply(){
+    makup.style.display ="flex"
+}
+function hidemakeup() {
+    makup.style.display="none"
+}
+
+// end of makeup
+
+// for skin pop 
+
+let skin = document.getElementsByClassName("makeup")[1]
+
+let for_skin = document.getElementById("for_skin")
+
+for_skin.addEventListener("mouseover" , disply2)
+for_skin.addEventListener("mouseleave" , hideskin)
+function disply2(){
+    skin.style.display ="flex"
+}
+function hideskin() {
+    skin.style.display="none"
+}
+//end skin pop
+
+//for kit&combos pop
+
+
+// let kitsandcombos = document.getElementById("Kits&combos")
+
+// let kits = document.getElementById("kits_combos")
+
+// kitsandcombos.addEventListener("mouseover" , showkit)
+// kitsandcombos.addEventListener("mouseleave" , hidkit)
+
+
+// function showkit() {
+//     kits.style.display = "block"
+// }
+// function hidkit() {
+//     kits.style.display = "none"
+// }
+
+
+
+
+//login start
+
+let loginn = document.getElementById("loginn")
+    let clicklog = document.getElementById("clicklog")
+    let cut = document.getElementById("cut")
+
+    clicklog.addEventListener("click" , showlogin)
+   function showlogin () {
+       loginn.style.display = "block"
+   }
+
+   cut.addEventListener("click" , hiddlogin)
+
+   function hiddlogin() {
+       loginn.style.display = "none"
+   }
+
+
+   let flag = false;
+
+   function loggin(event) {
+        event.preventDefault()
+
+
+
+        let email = document.getElementById("email")
+        let password = document.getElementById("password")
+
+        let all_users = JSON.parse(localStorage.getItem("hok_users"))
+
+
+        all_users.forEach(function(user){
+
+            if(email.value == user.email && password.value == user.password) {
+
+                email.value = ""
+                    password.value = ""
+                setTimeout(function(){
+                   
+                    window.location.href = "index.html"
+                },2000)
+                
+            }else {
+            flag = true
+            return
+            }
+
+        })
+
+      
+      
+    }
+
+    if(flag == true) {
+            alert("Invalid Credentials")
+        }
+
+    
+
+    //login end
+
+
+    </script>
+</html>

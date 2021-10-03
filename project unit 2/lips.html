@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+html {
+        scroll-behavior: smooth;
+        
+    }
+        * {
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+     
+        li,a {
+            list-style: none;
+            text-decoration: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .topbar {
+            background-color: #F4DDEE;
+            padding:10px 12%;
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+
+            /* position: fixed; */
+        }
+        .topbar a:hover {
+            text-decoration: underline;
+            transition: 0.9;
+        }
+        .log_sign li {
+            list-style: none;
+            display: inline-block;
+            margin: 0px 5px;
+        }
+        .log_sign  a {
+            text-decoration: none;
+            margin:0x 10px;
+            color:black;
+        }
+        .nav {
+            display: inline-block;
+        }
+
+
+        .logo_search {
+            padding: 15px 10%;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width:150px;
+            height:60px;
+        }
+  
+        .search input {
+            height: 45px;
+            width:250px;
+           
+            margin-right: 0px;
+            border:1px solid rgb(209, 199, 199);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .search_btn {
+            margin-left: 0px;
+            height:45px;
+            width:35px;
+            background-color: #FFFFFF;
+            border: 1px solid rgb(209, 199, 199);
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .search_wish_cart li {
+            display:inline-block;
+            margin:5px 20px;
+        }
+        #Top_search {
+            background-color: rgb(250, 249, 243);
+            position: fixed;
+            width:300px;
+            box-shadow: rgba(red,250,100, 0.6);
+            border-radius: 5px;
+            padding : 20px;
+            line-height: 30px;
+            display: flex;
+            flex-direction: column;
+            display: none;
+         
+        }
+        #Top_search a {
+            background-color: rosybrown;
+            margin:5px;
+        
+        }
+        #cart {
+            text-align: center;
+            width:22%;
+            position: fixed;
+            line-height: 50px;
+            border-radius: 10px;
+            background-color: white;
+            border-radius: 10px;
+            display:none;
+        }
+        #cart button {
+            background-color: white;
+            padding:5px 20px;
+            color:white;
+            width:90%;
+            border-radius: 8px;
+            color:black;
+        }
+        #cart button:hover {
+            color:#FF66B9;
+            background-color: #383E47;
+        }
+    
+
+
+
+
+
+
+        .navlist {
+            background-color: #383E47;
+            color:white;
+            padding:10px;
+            font-size: 14px;
+            font-weight: bold;
+            padding-left: 10%;
+            width:100%;
+        }
+        .navlist a:hover {
+            text-decoration: underline;
+            
+        }
+        .navlist a {
+            margin:10px;
+            color:white;
+            
+        }
+       
+        .makeup {
+            display:flex;
+            padding:10px;
+            background-color: white;
+            position: absolute;
+            padding-left: 10%;
+            width:100%;
+            font-size: 12px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+            display:none;
+        }
+        .makeup div {
+            margin:10px;
+            color:black;
+            line-height: 30px;
+            
+        }
+        .makeup div a {
+            text-decoration: none;
+        }
+        .color-pink {
+            color:#FF66B9;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        #kits_combos {
+            width:11.5%;
+            margin-left: 32.5%;
+            background-color: white;
+            line-height: 25px;
+            display:block;
+            font-size: 15px;
+            padding:10px;
+            position:absolute;
+            display:none;
+        }
+        #kits_combos p a {
+            text-decoration: none;
+        }
+
+
+        .home_product {
+            background-color: #F7F7F7;
+            padding:20px 10% 30px 10%;
+
+        }
+        .home_product p a {
+            text-decoration: none;
+            font-size: 12px;
+            color: black;
+            /* margin:10px; */
+        }
+
+
+        #container {
+            width:80%;
+            margin-left: 10%;
+            display:flex;
+            margin-top: 2%;
+        }
+
+        #side-btns {
+            width:17%;
+            display: inline-block;
+        }
+        #side-btns > div {
+            border:1px solid #d7e7f0;
+            margin-bottom: 15%;
+            box-sizing: content-box;
+            padding: 10px 20px ;
+            line-height: 35px;
+        }
+        #side-btns > div > div {
+            border-bottom: 1px solid #d7e7f0 ;
+        }
+        #side-btns div label {
+         font-size: 10px;   
+        }
+       
+        #box {
+            
+            display:grid;
+            grid-template-columns: 24% 24% 24% 24%;
+            width:80%;
+            margin-left: 3%;
+            grid-gap:1.3%;
+        }
+        #box img {
+            width: 100%;
+            height:50%
+        }
+        #box2 {
+            display:grid;
+            grid-template-columns:32.5% 32.5% 32.5%;
+            width:80%;
+            grid-gap: 1.5%;
+            margin-left: 3%;
+        }
+
+        .margin {
+            color: #a1a2a5;
+            font-weight: bold;
+            display:inline-block;
+            margin:30px 5px 20px;
+        }
+        .price {
+            color:#FF66B9;
+            display:inline-block;
+            font-weight: bold;
+            margin: 30px 5px 20px;
+        }
+
+        .cartbtn {
+            display:block;
+            background-color: white;
+            border:1px solid #FF66B9;
+            width:100%;
+            text-align: center;
+            padding:10px;
+            
+            color:#FF66B9;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);;
+        }
+        .cartbtn:hover {
+            background-color: #FF66B9;
+            color:white;
+        }
+        .brand {
+            color:#a1a2a5;
+            font-size: 14px;
+            margin:5px;
+        }
+        .name {
+            font-weight: bold;
+            font-size: 12px;
+            margin:5px;
+
+        }
+        #feature {
+            display:flex;
+            margin-left: 60%;
+            padding:5px;
+
+        }
+        #feature p, #feature select {
+            margin:5px;
+        }
+        #feature p, #feature button {
+            font-weight: bold;
+        }
+       #feature button {
+           width:20px;
+           background-color: white;
+           opacity: 0.5;
+       }
+       #feature button:hover {
+           opacity: 2;
+       }
+       .showfeat {
+           display:flex;
+           flex-direction: column;
+           background-color: white;
+           width:200px;
+           position:absolute;
+           margin-left: 74%;
+           display: none;
+       }
+       .showfeat button {
+           width:100%;
+       }
+
+
+
+       /* added  new css from here */
+       #d2 {
+            /* height: 400px; */
+            background-color: #2d3436;
+            color: white;
+        }
+        /* .d2 {
+            height: 300px;
+
+        } */
+        .h2 {
+            text-align: center; 
+            margin: 20px; 
+            padding-top: 20px;
+
+        }
+        .d3 {
+            /* border: 1px solid black; */
+            /* height: 250px; */
+            width: 70%;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+        .d4 {
+            display: inline-block;
+            width: 20%;
+            /* height: 250px; */
+            /* border: 1px solid black; */
+            vertical-align:text-top;
+            line-height: 30px;
+        }
+        #subscribe {
+            width: 38%;
+        }
+        .inp1 {
+            height: 40px;
+            width: 60%;
+            border-radius: 3px;
+        }
+        .inp2 {
+            height: 40px;
+            width: 30%;
+            background-color: pink;
+            border-radius: 3px;
+
+        }
+
+        #last {
+            margin-left: 15%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+            background-blend-mode: multiply,multiply;
+        }
+        #l {
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+            background-blend-mode: multiply,multiply;
+        }
+        span a {
+            text-decoration: none;
+          color:white
+        }
+        span a:hover {
+            text-decoration: underline;
+            color:#FF66B9;
+        }
+
+
+        #bottom{
+        margin: 1% 0;
+        background-color: #f7f7f7;
+    }
+    #bottom > div{
+        width: 20%;
+        margin: auto;
+        padding: 1%;
+         margin-left: 9%;
+        display: inline-block;
+        
+    }
+    #bottom > div > div {
+        display: inline-block;
+        margin-left: 5%;
+        margin-top: 6%;
+    }
+    #bottom > div > div > h2 {
+        font-family:Montserrat,sans-serif ;
+       font-size: medium;
+       margin: 6% 0;
+    }
+    #bottom > div > div > p{
+        font-family: Poppins,sans-serif;
+        font-size: small;
+        margin: 6% 0;
+    }
+    .fas , .fab{
+       color: rgb(167, 6, 6);
+       font-size: 18px ;
+    }
+
+      
+
+      
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="free600">FREE SHIPPING ON ORDERS ABOVE RS 600/-</div>
+        <div class="log_sign">
+            <ul class="nav">
+            <li><a href="#">Track Order</a></li>
+            <li style="font-size: 10px;"> <i style='font-size:15px' class='fas'>&#xf406;</i> </li>
+            <li><a href="#">Login</a></li>
+            <li>or</li>
+            <li> <a href="#">Create an account</a></li>
+        </ul>
+        </div>
+    </div>
+   
+   
+    <div class="logo_search">
+
+        <div class="logo">
+            <a href="index.html"><img src="https://cdn.shopify.com/s/files/1/1743/7443/files/website_logo.png?v=1609240506" alt="There could be logo" ></a>
+        </div>
+
+        <div class="search">
+         <ul class="search_wish_cart">
+           
+            <li> <input type="text" placeholder="search for products & brands etc," id="search_input">
+                <a href="#"><button class="search_btn"><i class="fas fa-search" ></button></i></a>
+                <div id="Top_search" class="hide_search">
+                    <p>TRENDING</p>
+                    <a href="#">New arrival</a>
+                    <a href="#">Makeup Kit</a>
+                    <a href="#">Make Revolution</a>
+                    <a href="#">Milani</a>
+                    <a href="#">L.A. Girl</a>
+                </div>
+           
+           </li>
+          
+           <li ><a href="#" style="font-size:35px; margin:0px; padding:0px"> &#9825; </a> </li>
+          
+           <li><a href="#"> <i style="font-size:29px" class="fa" id="cart_icon">&#xf07a;</i> </a></li>
+          
+    <div id="cart">
+        <p></p>
+        <a href="hokcart.html"><button>View Cart</button></a>
+    </div>
+           
+         </ul>
+        
+        </div>
+    </div>
+
+
+    <div class="navlist">
+
+        <a href="#">NEW ARRIVALS</a>
+        
+         <a href="#" id="make_up">MAKE UP</a>
+         <a href="#" id="for_skin">SKIN</a>
+         <a href="#">BRANDS</a>
+         <a href="#" id="kits&combos">KITS&COMBOS</a>
+         <a href="#">OFFERS <sup style="background-color: rgb(235, 101, 124); border-radius: 5px; padding:3px; font-size: 8px;">HOT</sup></a>
+         <a href="#">TUTORIALS</a>
+
+    </div>
+    <div class="makeup">
+        <div>
+            <p><a href="#" class="color-pink">Eyes</a></p>
+            <p><a href="#">EyeBrow Enhancer</a></p>
+            <p><a href="#">Eye liner</a></p>
+            <p><a href="#">Eye primer</a></p>
+            <p><a href="#">Eye shadow</a></p>
+            <p><a href="#">False eyelashes</a></p>
+            <p><a href="#">Kajal</a></p>
+            <p><a href="#">Mascara</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Face</a></p>
+            <p><a href="#">Blush</a></p>
+            <p><a href="#">B.B / C.C cream</a></p>
+            <p><a href="#">Bronzer</a></p>
+            <p><a href="#">Compact</a></p>
+            <p><a href="#">Concealer</a></p>
+            <p><a href="#">Contour</a></p>
+            <p><a href="#">Foundation</a></p>
+            <p><a href="#">Highlighter</a></p>
+            <p><a href="#">Loose power</a></p>
+            <p><a href="#">Primer</a></p>
+            <p><a href="#">Makeup remover</a></p>
+            <p><a href="#">Setting Spray</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Lips</a></p>
+            <p><a href="#">Lip Balm</a></p>
+            <p><a href="#">Lip Gloss</a></p>
+            <p><a href="#">Lip liner</a></p>
+            <p><a href="#">Lipstick</a></p>
+            <p><a href="#">Liquid Lipstick</a></p>
+
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Nails</a></p>
+            <p><a href="#">Nail Polish</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Tools & Brushes</a></p>
+            <p><a href="#">Brush set</a></p>
+            <p><a href="#">Face brush</a></p>
+            <p><a href="#">Eye brush</a></p>
+            <p><a href="#">Lip brush</a></p>
+            <p><a href="#">Sponges and Applicators</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Kits</a></p>
+            <p><a href="#">Eye Palettes</a></p>
+            <p><a href="#">Face palettes</a></p>
+        </div>
+     </div>
+
+     <div class="makeup">
+        <div>
+            <p><a href="#" class="color-pink">Face</a></p>
+            <p><a href="#">Cleanser</a></p>
+            <p><a href="#">cream</a></p>
+            <p><a href="#">Face mask</a></p>
+            <p><a href="#">Serum & Oil</a></p>
+            <p><a href="#">Face Wash</a></p>
+            <p><a href="#">Facial Mist</a></p>
+            <p><a href="#">Facial Wipes</a></p>
+            <p><a href="#">Gel</a></p>
+            <p><a href="#">Scrub</a></p>
+            <p><a href="#">Moisturizer</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Eyes</a></p>
+            <p><a href="#">Eye Cream</a></p>
+            <p><a href="#">Eye Patch</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Lip Care</a></p>
+            <p><a href="#">Lip Balm</a></p>
+            <p><a href="#">Petrolium Jelly</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Bath & Body</a></p>
+            <p><a href="#">Shower Gel</a></p>
+            <p><a href="#">Foot Scrub</a></p>
+            <p><a href="#">Body Oil</a></p>
+        </div>
+        <div>
+            <p><a href="#"  class="color-pink">Hair</a></p>
+            <p><a href="#">Hair Masque</a></p>
+            <p><a href="#">Hair Gel</a></p>
+            <p><a href="#">Shampoo</a></p>
+        </div>
+    </div>
+    
+    <div id="kits_combos">
+        <p><a href="#">Combos</a></p>
+        <p><a href="#">Basic KIts</a></p>
+        <p><a href="#">Customisable Kits - </br> Basic</a></p>
+        <p><a href="#">Customisable Kits - </br> Professional</a></p>
+    </div>
+     
+     <div>
+         <img src="https://cdn.shopify.com/s/files/1/1743/7443/files/KITS.jpg?v=1631268360" width="100%" Height="300px">
+     </div>
+     
+     <div class="home_product">
+         <p style="display: inline-block;"><a href="index.html">Home</a></p>
+         <p style="display: inline-block; margin:0px 10px">  > </p>
+         <p style="display: inline-block;"><a href="products.html">Products</a></p>
+         <h1>Products</h1>
+     </div>
+     
+     <div id="feature">
+        <p>View as</p>
+        <button onclick="onecol()">=</button>
+        <button onclick="threecol()">|||</button>
+        <button onclick="fourcol()">||||</button>
+        <p>SORT BY</p>
+        <button onclick="showfeature()" style="width:200px">Featured &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;▼</button>
+        <!-- <button onclick="sortLH()">lh</button> -->
+     </div>
+     <div class="showfeat">
+        <button>Featured</button>
+        <a href="#"><button>Best selling</button></a>
+        <button onclick="sortLH()">Price low to high</button>
+        <button onclick="sortHL()">Price high to low</button>
+        <a><button>What's new</button></a>
+    </div>
+
+     <div id="container">
+     <div id="side-btns">
+        <div>
+            <div><h4>CATEGORY</h4></div>
+            <input type="checkbox" id="eyes">
+            <lable>Eyes</lable> <br>
+            <input type="checkbox" id="lips">
+            <lable>Lips</lable>
+        </div>
+        <div>
+            <div><h4>BRAND</h4></div>
+            <input type="checkbox" id="Beauty-creations">
+            <lable>Beauty Creation</lable> <br>
+            <input type="checkbox" id="Hok-Makeup">
+            <lable>Hok Makeup</lable> <br>
+            <input type="checkbox" id="Revolution Beauty">
+            <lable>Revolution Beauty</lable>
+        </div>
+        <div>
+            <div><h4>PRICE</h4></div>
+            <input type="checkbox" id="0-499">
+            <lable>Rs.0 - Rs.499</lable> <br>
+            <input type="checkbox" id="500-999">
+            <lable>Rs.500 - Rs.999</lable> <br>
+            <input type="checkbox" id="1000-1999">
+            <lable>Rs.1000 - Rs.1999</lable>
+        </div>
+        <div>
+            <div><h4>DISCOUNT</h4></div>
+            <input type="checkbox" id="15%">
+            <lable>Upto 15%</lable> <br>
+            <input type="checkbox" id="30-50%">
+            <lable>30% - 50%</lable> <br>
+            <input type="checkbox" id="50%">
+            <lable>50% & Above</lable>
+        </div>
+     </div>
+     
+        <div id="box"></div>
+
+    </div>
+    <br>
+    <br/>
+    <br/>
+    <br/>
+    <div id="bottom">
+
+        <div>
+            <i class="fas fa-gift"></i>
+            <div>
+                <h2>GENUINE PRODUCTS</h2>
+                <P>Sourced Directly From Brands</P>
+            </div>
+            
+        </div>
+
+        <div>
+            <i class="fas fa-truck"></i>
+            <div>
+                <h2>FREE SHIPPING</h2>
+                <P>For Orders Above Rs. 600</P>
+            </div>
+        </div>
+
+        <div>
+            <i class="fab fa-cc-visa"></i>
+            <div>
+                <h2>SECURE PAYMENTS</h2>
+                <P>Using 256-bit SSL Encryption</P>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="d1">
+
+    </div>
+    <div id="d2">
+        <h2 class="h2">
+        Need help? Call our support team at +91 9810245261
+        </h2>
+        <hr style="width: 70%; margin: auto;">
+        <div class="d3">
+            <div class="d4">
+                <h3>INFORMATION</h3>
+                   <span><a href="#"> About Us </a> </span><br>
+                  <span><a href="#">  Contact Us </a> </span><br>
+                  <span><a href="#">  Return Policy</a> </span><br>
+                <span><a href="#">Terms & Conditions</a> </span><br>
+                <span><a href="#">  Careers At Hok</a> </span><br>
+                    <span><a href="#">  Frequently Ask Questions </a></span><br>
+                        <span><a href="#">  Privacy Policy</a> </span><br>
+                            <span><a href="#">  Shipping Policy</a> </span><br>
+                                <span><a href="#">Offers</a> </span><br>
+            </div>
+            <div class="d4">
+                <h3>OUR TOP CATEGORIES</h3>
+                <span><a href="#"> Eyes</a> </span><br>
+                <span><a href="#">  Face </a></span><br>
+                <span><a href="#"> Brushes </a></span><br>
+                <span><a href="#"> Kits </a> </span><br>
+                <span><a href="#"> Lips</a> </span><br>
+                <span><a href="#">  Nails </a></span><br>
+            </div>
+            <div class="d4" id="subscribe">
+                <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+                Get the latest updates on new products and upcoming sales <br> <br> <br>
+                <input type="text", placeholder="E-mail" class="inp1" >
+                <a href=""> <button class="inp2">subscribe</button> </a><br> <br>
+                <div>
+                    <a href="https://www.facebook.com" target="_blank"><i style="font-size:24px; color:white; margin: 5px 10px" class="fa">&#xf230;</i></a>
+                   
+                   <a href="https://twitter.com/?lang=en-in" target="_blank"> <i style="font-size:24px; color:white; margin:5px 10px;" class="fa">&#xf099;</i> </a>
+
+                   <a href="https://www.instagram.com" target="_blank"><i style="font-size:24px; color:white; margin:5px 10px" class="fa">&#xf16d;</i></a>
+                   
+
+                </div>
+            </div>
+            <div class="d4">
+                <h3>CONTACT</h3>
+                Hok Beauty Pvt Ltd. <br>
+                A-26, Ground Floor,  <br>
+                Naraina Industrial Area <br>
+                Phase 2 New Delhi-110028br <br> <br>
+
+                +91 9810245261 <br>
+
+                Mon-Sat 10 AM to 7 PM <br><br>
+
+
+                Email:  <br>
+                support@hokmakeup.com <br>
+                
+            </div>
+        </div>
+        <div class="d3">
+            HOK MAKEUP is the easiest way to buy international makeup brands in India.  <br>
+            100% genuine products sourced directly from the brands.
+        </div>
+        
+    </div>
+    <div id="l">
+        <div id="last">
+            All rights reserved © 2018 Hok Beauty Pvt. Ltd.
+        </div>
+    </div>
+    
+</body>
+
+<script>
+
+    //for search portion
+
+let Top_search = document.getElementById("Top_search")
+
+let search = document.getElementById("Top_search")
+
+let text = search.querySelectorAll("a")
+
+let search_input = document.getElementById("search_input")
+
+search_input.addEventListener("click",show)
+
+Top_search.addEventListener("mouseleave",hide)
+
+function show(e) { 
+search_input.textContent = text.textContent
+   search.style.display = "flex"
+}
+function hide() {
+    search.style.display = "none"
+}
+//end of search portion
+
+// for cart icon portion
+let count = 0;
+if(count == 0) {
+let cart_pop = document.getElementById("cart")
+let cart_icon = document.getElementById("cart_icon")
+cart_icon.addEventListener("click", pop)
+cart_pop.addEventListener("mouseleave", hiden)
+
+function pop () {
+    cart_pop.style.display = "block" 
+}
+function hiden() {
+    cart_pop.style.display = "none"
+}
+}
+// end of cart icon
+
+//for makeup pop 
+
+let makup = document.getElementsByClassName("makeup")[0]
+
+let make_up = document.getElementById("make_up")
+
+make_up.addEventListener("mouseover" , disply)
+make_up.addEventListener("mouseleave" , hidemakeup)
+function disply(){
+    makup.style.display ="flex"
+}
+function hidemakeup() {
+    makup.style.display="none"
+}
+
+// end of makeup
+
+// for skin pop 
+
+let skin = document.getElementsByClassName("makeup")[1]
+
+let for_skin = document.getElementById("for_skin")
+
+for_skin.addEventListener("mouseover" , disply2)
+for_skin.addEventListener("mouseleave" , hideskin)
+function disply2(){
+    skin.style.display ="flex"
+}
+function hideskin() {
+    skin.style.display="none"
+}
+//end skin pop
+
+// for kit&combos pop
+
+
+// let kitsandcombos = document.getElementById("Kits&combos")
+
+// let kits = document.getElementById("kits_combos")
+
+// kitsandcombos.addEventListener("mouseover" , showkit)
+// kitsandcombos.addEventListener("mouseleave" , hidkit)
+
+
+// function showkit() {
+//     kits.style.display = "block"
+// }
+// function hidkit() {
+//     kits.style.display = "none"
+// }
+
+
+let products = [
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Iresistible_110x110@2x.jpg?v=1630136614",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/BeautyCreations1_1_29332f1b-8e0b-4cca-be98-0247d5f8e467_110x110@2x.jpg?v=1630136617",
+        brand:"Beauty Creations",
+        name:"Beauty Creations Long Wear Matte Lip Gloss - Irresistible",
+        margin: "1200",
+        price:"799"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0744109494161-1_110x110@2x.jpg?v=1631877963",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0744109494161-2_110x110@2x.jpg?v=1631877963",
+        brand:"Beauty Creations",
+        name:"Rosy Gold Naughty & Nice Lipstick Kit",
+        margin: "1000",
+        price:"617"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1_300cbe62-e753-4206-b120-a33ce6fdaf07_110x110@2x.jpg?v=1622801476",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Glorified106_110x110@2x.jpg?v=1622800640",
+        brand:"Beauty Creations",
+        name:"Make it Matte Liquid Lipstick Trio Kit - Destiny + Glorified + Excess",
+        margin: "1500",
+        price:"999"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/milanicomboimage_110x110@2x.jpg?v=1624694348",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Lipstick_Swatch_110x110@2x.jpg?v=1625560590",
+        brand:"Beauty Creations",
+        name:"Milani Matte Lipstick Trio",
+        margin: "1090",
+        price:"899"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/40285_-_RevolutionPro_-Supreme_Matte_Lip_Pigment__-__Charade_110x110@2x.jpg?v=1621506953",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/40285_-_1_-_RevolutionPro_-Supreme_Matte_Lip_Pigment__-__Charade_110x110@2x.jpg?v=1621506953",
+        brand: "Beauty Creations",
+        name:"Revolution Pro Supreme Matte Lip Pigment",
+        margin: "1405",
+        price:"780"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/7_3c962b07-491b-44e7-bfa6-06ce007e765c_110x110@2x.jpg?v=1620678553",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/7.1_110x110@2x.jpg?v=1620679017",
+        brand: "Beauty Creations",
+        name:"L.A. Color Combo - 7",
+        margin: "1001",
+        price:"799"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/GP734_prod_img_2_1024x1024_77627cae-294f-41f8-a149-afa5cd668dee_110x110@2x.jpg?v=1630137098",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/blackout_grande_4b791c67-c344-471b-967d-ba0364361d1a_110x110@2x.jpg?v=1630137100",
+        brand: "Beauty Creations",
+        name:"L.A. Girl Shockwave Neon Lip Liner",
+        margin: "1302",
+        price:"665"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/40345_2_110x110@2x.jpg?v=1569239311",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/40345_1_110x110@2x.jpg?v=1569239307",
+        brand: "Beauty Creations",
+        name:"Revolution Pro Lip Prime And Perfect",
+        margin: "1000",
+        price:"600"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0728228565558-3_110x110@2x.jpg?v=1631879036",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/0728228565558-4_110x110@2x.jpg?v=1631879036",
+        brand: "Beauty Creations",
+        name:"Rosy Gold Matte Lipstick",
+        margin: "1300",
+        price:"999"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/MURCOMBO33_45a8132c-1a2f-49ab-9865-837c6ce9acf7_110x110@2x.jpg?v=1612171195",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/LipBoutiqueColourPops_MatteLipstick_02_70a53418-5907-4d16-b5f9-fa25d82329b4_110x110@2x.jpg?v=1614075735",
+        brand: "Beauty Creations",
+        name:"Revolution Matte Lipstick Combo 2",
+        margin: "1050",
+        price:"775"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1194846-RevolutionPro-NewNeutrals-BlushedSatinMattLipstick-Rumba_2-720x720-747df331-c6d3-4b02-b475-0a3e15_110x110@2x.jpg?v=1615207665",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1194846-RevolutionPro-NewNeutrals-BlushedSatinMattLipstick-Rumba_4-720x720-93f15c6f-6331-4f42-9209-8f9058_110x110@2x.jpg?v=1615207665",
+        brand: "Beauty Creations",
+        name:"Revolution Pro New Neutrals Blushed Satin Matte Lipstick",
+        margin: "1050",
+        price:"899"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Undressed_cdda07aa-6905-4c4a-a67d-cfd58c874d4d_110x110@2x.jpg?v=1630136648",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/undressed_110x110@2x.jpg?v=1630136669",
+        brand: "Beauty Creations",
+        name:"Wet N Wild Silk Finish Lipstick",
+        margin: "1290",
+        price:"879"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/lip-smacker-coca-cola-tin-box-6pcs_110x110@2x.jpg?v=1569202700",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/lip-smacker-coca-cola-tin-box-6pcs-1_110x110@2x.jpg?v=1569202700",
+        brand: "Beauty Creations",
+        name:"Lip Smacker Coca Cola Lip Balm Tin Box 6pcs",
+        margin: "1090",
+        price:"449"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/1_299d5094-15f9-4fec-a90a-d60226326c3c_110x110@2x.jpg?v=1630138332",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/2_97cd8809-b4f5-4805-963a-68f4c7f8b310_110x110@2x.jpg?v=1630138335",
+        brand: "Beauty Creations",
+        name:"Milani Rose Transforming Lip Balm",
+        margin: "1250",
+        price:"799"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Combo_706cdab5-6138-4d14-bcef-2aec5c5fa462_110x110@2x.jpg?v=1622744412",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/HeartRace113_110x110@2x.jpg?v=1622743549",
+        brand: "Beauty Creations",
+        name:"Make it Matte Liquid Lipstick Trio Kit - Cupcake + Rouge +åÊHeart Race",
+        margin: "1080",
+        price:"798"
+    },
+    {
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/milanicomboimage_110x110@2x.jpg?v=1624694348",
+        img:"https://cdn.shopify.com/s/files/1/1743/7443/products/Lipstick_Swatch_110x110@2x.jpg?v=1625560590",
+        brand: "Beauty Creations",
+        name:"Milani Matte Lipstick Trio",
+        margin: "1290",
+        price:"650"
+    }
+
+]
+
+
+
+
+//let count = 0;
+
+let parent = document.getElementById("box")
+
+function showhokproduct(products) {
+    parent.innerHTML = null
+    products.forEach(function(products) {
+        
+
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+        img.src = products.img
+
+        img.addEventListener("mouseover" , setnewimg)
+        img.addEventListener("mouseleave" , setoldimg)
+
+        function setnewimg() {
+            img.src = products.img2
+        }
+        function setoldimg() {
+            img.src = products.img
+        }
+
+        let brand = document.createElement("p")
+        brand.setAttribute("class" , "brand")
+        brand.textContent = products.brand
+
+        let name = document.createElement("p")
+        name.setAttribute("class" , "name")
+        name.textContent = products.name
+
+        let margin = document.createElement("del")
+        margin.textContent = "₹" + " " + products.margin
+        margin.setAttribute("class" , "margin")
+
+        let price = document.createElement("p")
+        price.setAttribute("class" , "price")
+        price.textContent =  "₹" + " " +products.price
+
+
+        let addtocart_btn = document.createElement("button")
+        addtocart_btn.setAttribute("class" , "cartbtn")
+        addtocart_btn.innerText = "ADD TO CART"
+
+
+        addtocart_btn.onclick = function() {
+        for(let i = 0; i < 10; i++) {
+            count++
+        }
+        addtocart(products)
+
+        };
+
+        div.append(img,brand,name,margin,price,addtocart_btn)
+        parent.append(div)
+    })
+}
+showhokproduct(products)
+
+if(localStorage.getItem("hokcart") === null) {
+    localStorage.setItem("hokcart" , JSON.stringify([]))
+}
+
+function addtocart(products) {
+
+    let products_cart = JSON.parse(localStorage.getItem("hokcart"));
+
+    products_cart.push(products)
+
+    localStorage.setItem("hokcart" , JSON.stringify(products_cart))
+}
+
+
+
+
+
+
+
+
+let box = document.getElementById("box")
+
+function onecol() {
+    box.setAttribute("id" , "box1")
+}
+
+function threecol() {
+    box.setAttribute("id" , "box2")
+
+}
+function fourcol() {
+    box.setAttribute("id" , "box")
+}
+
+function showfeature() {
+    let showdown = document.getElementsByClassName("showfeat")[0]
+    showdown.style.display = "flex"
+}
+let showfeat = document.getElementsByClassName("showfeat")[0]
+let shut = showfeat.querySelectorAll("button")
+showfeat.addEventListener("mouseleave" , shutup)
+
+function shutup() {
+    showfeat.style.display = "none"
+}
+
+
+function sortLH() {
+
+let arr = products.sort(function (a,b){
+
+  return a.price - b.price
+})
+showhokproduct(arr)
+};
+
+
+function sortHL() {
+
+let arr = products.sort(function (a,b){
+
+  return b.price - a.price
+})
+showhokproduct(arr)
+};
+
+</script>
+</html>
