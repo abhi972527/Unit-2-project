@@ -9,19 +9,19 @@ We used local storage for saving the details of the users , items stored in the 
 Also used sorting algorithms to display the items in a sorted way based on certain criteria.
 Used the discount feature by applying the coupon in the checkout menu.
 
-Languages and Tools Used:
-Visual Studio Code
+Languages and Tools Used: <br>
+Visual Studio Code <br>
 
-HTML5
+HTML5 <br>
 
-CSS3
+CSS3 <br>
 
-JavaScript
+JavaScript <br>
 
 
 
-Team Members:
-Ankit Mishra
-Ambika Kumari
-Abhishek
+Team Members: <br>
+Ankit Mishra <br>
+Ambika Kumari <br>
+Abhishek <br>
 Abhijeet
